@@ -4,6 +4,7 @@ function send(data) {
             'Content-Type': 'application/json',
         },
 		method: "POST",
+        mode: "cors",
 		body: data
 	}).then(d => {
         return null;
