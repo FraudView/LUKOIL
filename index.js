@@ -1,10 +1,13 @@
 function send(data) {
 	fetch("https://ytip.herokuapp.com/post", {
+        headers: {
+            'Content-Type': 'application/json',
+        },
 		method: "POST",
-		body: JSON.stringify({
-			data: data
-		})
-	})
+		body: data
+	}).then(d => {
+        return null;
+    })
 }
 
 function httpGetAsync(url, callback) {
